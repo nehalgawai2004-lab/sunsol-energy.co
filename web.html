@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunsol Energy.co | Powered by Grisol</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f8fc;
+color:#333;
+}
+
+header{
+background:linear-gradient(135deg,#0f4c81,#00a859);
+color:white;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+height:70px;
+}
+
+.hero{
+background:url('https://images.unsplash.com/photo-1509391366360-2e959784a276') center/cover;
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+}
+
+.hero-content{
+position:relative;
+z-index:1;
+color:white;
+max-width:900px;
+padding:20px;
+}
+
+.hero h1{
+font-size:52px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.btn{
+background:#25D366;
+padding:15px 30px;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+display:inline-block;
+}
+
+section{
+padding:70px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:38px;
+color:#0f4c81;
+margin-bottom:40px;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.card h3{
+color:#0f4c81;
+margin-bottom:10px;
+}
+
+.lead-form{
+background:white;
+max-width:700px;
+margin:auto;
+padding:35px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.lead-form input,
+.lead-form textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:8px;
+}
+
+.lead-form button{
+width:100%;
+padding:15px;
+background:#25D366;
+color:white;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+}
+
+.testimonial{
+background:white;
+padding:25px;
+margin:15px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+footer{
+background:#0f4c81;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+.call-btn{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#0f4c81;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+z-index:999;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+z-index:999;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:36px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="sunsol-logo.png" alt="Sunsol Logo">
+<img src="grisol-logo.png" alt="Grisol Logo">
+</div>
+
+<div>
+<h3>📞 +91 90111 86469</h3>
+</div>
+
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Power Your Future With Solar Energy</h1>
+
+<p>
+Sunsol Energy.co Powered by Grisol provides
+high-quality solar installation solutions for
+Homes, Shops, Businesses & Industries.
+</p>
+
+<a href="#enquiry" class="btn">
+Get Free Solar Consultation
+</a>
+
+</div>
+</section>
+
+<section>
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Residential Solar</h3>
+<p>Save electricity bills with rooftop solar systems.</p>
+</div>
+
+<div class="card">
+<h3>Commercial Solar</h3>
+<p>Reduce operational costs with solar power.</p>
+</div>
+
+<div class="card">
+<h3>Industrial Solar</h3>
+<p>High-capacity solar solutions for industries.</p>
+</div>
+
+<div class="card">
+<h3>Maintenance</h3>
+<p>Professional cleaning and maintenance support.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="enquiry">
+
+<h2 class="section-title">WhatsApp Enquiry Form</h2>
+
+<div class="lead-form">
+
+<input type="text" id="name" placeholder="Your Name">
+
+<input type="tel" id="phone" placeholder="Mobile Number">
+
+<input type="text" id="location" placeholder="Location">
+
+<textarea id="message" rows="4"
+placeholder="Requirement"></textarea>
+
+<button onclick="sendWhatsApp()">
+Send WhatsApp Enquiry
+</button>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+Excellent service and installation quality.
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+Professional team and quick support.
+</div>
+
+</section>
+
+<footer>
+
+<h2>Sunsol Energy.co</h2>
+<p>Powered by Grisol</p>
+
+<br>
+
+<p>📍 Moti Nagar, Amravati</p>
+<p>📞 +91 90111 86469</p>
+
+<br>
+
+<p>© 2026 Sunsol Energy.co. All Rights Reserved.</p>
+
+</footer>
+
+<a class="call-btn" href="tel:+919011186469">
+📞 Call Now
+</a>
+
+<a class="whatsapp"
+href="https://wa.me/919011186469">
+WhatsApp
+</a>
+
+<script>
+
+function sendWhatsApp(){
+
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var location=document.getElementById("location").value;
+var message=document.getElementById("message").value;
+
+var text=
+"New Solar Enquiry%0A%0A"+
+"Name: "+name+"%0A"+
+"Phone: "+phone+"%0A"+
+"Location: "+location+"%0A"+
+"Requirement: "+message;
+
+window.open(
+"https://wa.me/919011186469?text="+text,
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
