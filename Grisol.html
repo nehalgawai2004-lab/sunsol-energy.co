@@ -1,0 +1,149 @@
+```html id="2t7w8n"
+<!-- WhatsApp Enquiry Form -->
+
+<section class="enquiry-section">
+
+    <div class="enquiry-container">
+
+        <h2>Get Free Solar Consultation</h2>
+
+        <p>Fill the details below and send your enquiry directly to WhatsApp.</p>
+
+        <form id="whatsappForm">
+
+            <input type="text" id="name" placeholder="Full Name" required>
+
+            <input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+            <input type="text" id="city" placeholder="City / Location" required>
+
+            <input type="number" id="bill" placeholder="Monthly Electricity Bill (₹)" required>
+
+            <select id="type">
+                <option>Residential Solar</option>
+                <option>Commercial Solar</option>
+                <option>Industrial Solar</option>
+                <option>Solar Water Pump</option>
+            </select>
+
+            <textarea id="message" rows="4" placeholder="Your Requirement"></textarea>
+
+            <button type="submit">
+                Send Enquiry on WhatsApp
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<style>
+
+.enquiry-section{
+    padding:80px 20px;
+    background:#f7f9fc;
+}
+
+.enquiry-container{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.enquiry-container h2{
+    text-align:center;
+    color:#0038ff;
+    margin-bottom:10px;
+}
+
+.enquiry-container p{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+#whatsappForm input,
+#whatsappForm select,
+#whatsappForm textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+#whatsappForm button{
+    width:100%;
+    background:#25D366;
+    color:white;
+    border:none;
+    padding:15px;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+#whatsappForm button:hover{
+    opacity:0.9;
+}
+
+@media(max-width:768px){
+
+.enquiry-container{
+    padding:25px;
+}
+
+#whatsappForm input,
+#whatsappForm select,
+#whatsappForm textarea{
+    font-size:15px;
+}
+
+}
+
+</style>
+
+<script>
+
+document.getElementById("whatsappForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let mobile = document.getElementById("mobile").value;
+let city = document.getElementById("city").value;
+let bill = document.getElementById("bill").value;
+let type = document.getElementById("type").value;
+let message = document.getElementById("message").value;
+
+let whatsappMessage =
+`🌞 *New Solar Enquiry*
+
+👤 Name: ${name}
+
+📞 Mobile: ${mobile}
+
+📍 Location: ${city}
+
+💡 Monthly Bill: ₹${bill}
+
+🏠 Requirement: ${type}
+
+📝 Message: ${message}
+
+Sent from Sunsol Energy Website`;
+
+let url =
+`https://wa.me/919011186469?text=${encodeURIComponent(whatsappMessage)}`;
+
+window.open(url, "_blank");
+
+});
+
+</script>
+```
